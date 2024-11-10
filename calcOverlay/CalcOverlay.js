@@ -1,5 +1,5 @@
-const { BrowserWindow } = require('electron');
-const path = require('path');
+const { BrowserWindow } = require('electron')
+const path = require('path')
 class CalcOverlay{
     constructor(){
         this.window = new BrowserWindow({
@@ -12,7 +12,7 @@ class CalcOverlay{
             customProperty: 'calcOverlay' 
         });
         this.window.setOpacity(0.25)
-        this.window.loadFile('./calcOverlay/calcOverlay.html');
+        this.window.loadFile('./calcOverlay/calcOverlay.html')
     }
     close(){
         this.window.close()

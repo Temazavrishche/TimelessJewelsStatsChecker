@@ -1,5 +1,15 @@
-const fs = require('fs')
-const skillTree = JSON.parse(fs.readFileSync('./data/SkillTree.json'))
+const fs = require('fs').promises
+const { app, dialog } = require('electron')
+let skillTree
+async function skilltree() {
+  try{
+    skillTree = JSON.parse(await fs.readFile('./data/SkillTree.json'))
+  }catch(error){
+    dialog.showErrorBox(`Error load skill tree`, error.toString())
+    app.quit()
+  }
+}
+skilltree()
 const drawnNodes = {}
 const drawnGroups = {}
 

@@ -1,14 +1,8 @@
-const { clipboard } = require('electron');
-const { Hardware } = require("keysender");
-const { getStats } = require("./getStats.js");
-const fs = require('fs')
-const path = require('path')
-const settings = JSON.parse(fs.readFileSync(path.join(__dirname, '../settings/settings.json')))
-
+const { clipboard } = require('electron')
+const { Hardware } = require("keysender")
 const collectJewels = async (positions) => {
-    console.log('start collecting')
     const rawJewels = []
-    const step = settings[settings.currentTab]
+    const step = global.settings[global.settings.currentTab]
     const current = {x: positions.first.x, y: positions.first.y}
     const xSteps = Math.round((positions.second.x - positions.first.x) / step) + 1
     const ySteps = Math.round((positions.second.y - positions.first.y) / step) + 1
@@ -25,9 +19,9 @@ const collectJewels = async (positions) => {
         current.x += step
 
         currentXStep++
-        currentXStep >= xSteps ? (current.x = positions.first.x, current.y += step, currentXStep = 0, currentYStep++) : false
+        currentXStep >= xSteps && (current.x = positions.first.x, current.y += step, currentXStep = 0, currentYStep++)
 
-        currentYStep >= ySteps ? active = false : false        
+        currentYStep >= ySteps && (active = false)   
 
         if(!currentClipboard.includes('Timeless Jewel') || currentClipboard === prevClipboard) continue
 
@@ -35,7 +29,7 @@ const collectJewels = async (positions) => {
         rawJewels.push(currentClipboard)
     }
     clipboard.writeText(userClipboard)
-    parseJewel(rawJewels)
+    return parseJewel(rawJewels)
 }
 
 const parseJewel = (jewels) => {
@@ -50,7 +44,7 @@ const parseJewel = (jewels) => {
     for(const item in jewels){
         let jewelName = 0
         let conquerorName = ''
-        let seed = jewels[item].match(/\b\d{3,6}\b/);
+        let seed = jewels[item].match(/\b\d{3,6}\b/)
         for (const [name, conqueror] of Object.entries(jewelsId)){
             if (conqueror.some(name => jewels[item].includes(name))){
                 jewelName = name
@@ -62,7 +56,6 @@ const parseJewel = (jewels) => {
             seed: seed[0],
         })
     }
-    console.log('jewels parsed')
-    getStats(parsedJewels)
+    return parsedJewels
 }
 module.exports.collectJewels = collectJewels

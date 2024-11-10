@@ -1,6 +1,8 @@
 const { app, Tray, Menu } = require('electron');
 const { MainWindow } = require('../mainWindow/MainWindow.js')
 const { Settings } = require("../settings/Settings.js")
+const fs = require('fs').promises
+
 class AppTray{
     constructor(){
         this.tray = new Tray('./img/tray-icon.jpg')
@@ -23,8 +25,9 @@ class AppTray{
             },
             {
                 label: 'Last results',
-                click: () =>{
-                    new MainWindow()
+                click: async () =>{
+                    const jewels = await fs.readFile('./filteredResults.json', 'utf8').then(JSON.parse)
+                    new MainWindow(jewels)
                 }
             }
         ])

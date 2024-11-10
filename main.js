@@ -1,26 +1,44 @@
-const { app, globalShortcut, ipcMain } = require('electron');
-const path = require('path');
-const fs = require('fs');
+const { app, globalShortcut, ipcMain, Notification, dialog } = require('electron')
+const path = require('path')
+const fs = require('fs').promises
 const { AppTray } = require('./tray/AppTray.js')
 const { CalcOverlay } = require('./calcOverlay/CalcOverlay.js')
-const { collectJewels } = require('./calculations/collectJewels.js');
+const { calculate } = require('./calculations/calculator.js')
 
 let clacOverlay = null
-
+async function loadSettings() {
+  const settingsPath = path.join(__dirname, 'settings', 'settings.json');
+  try {
+    global.settings = JSON.parse(await fs.readFile(settingsPath, 'utf-8'))
+  }catch(err){
+    global.settings = {
+      "normal": 53,
+      "quad": 26.5,
+      "currentTab": "normal",
+      "minWeight": 150,
+      "tradeIndexed": "1week"
+    } // настройки по умолчанию
+    new Notification({body: `Error while load settings.\nLoaded default settings`, title: 'Notification', silent: true}).show()
+  }
+}
+loadSettings();
 app.on('ready', async () =>{
-  console.log('App is ready')
   new AppTray()
-  const openOverlay = globalShortcut.register('Ctrl+Shift+T', () => {
+  globalShortcut.register('Ctrl+Shift+T', () => {
     clacOverlay = new CalcOverlay()
-  });
-  const exit = globalShortcut.register('Ctrl+Space+T', () => {
-    app.exit()
-  });
+    globalShortcut.register('Esc', () => {
+      clacOverlay.close()
+      clacOverlay = null
+      globalShortcut.unregister('Esc')
+    })
+  })
+  console.log('App is ready')
 })
 
-ipcMain.on('positions',(event,data) => {
-    collectJewels(data)
+ipcMain.on('positions',(event,positions) => {
+    calculate(positions)
     clacOverlay.close()
+    clacOverlay = null
 })
 
 app.on('window-all-closed', (e) => {
@@ -37,19 +55,25 @@ app.on('browser-window-created', (event, newWindow) => {
   })
 });
 
-ipcMain.handle('lastResult', () => {
-  const data = fs.readFileSync(path.join(__dirname, 'filteredResults.json'));
-  console.log('last result loaded')
-  return JSON.parse(data);
+ipcMain.handle('lastResult', async (event) => {
+  try{
+    const data = await fs.readFile(path.join(__dirname, 'filteredResults.json'))
+    return JSON.parse(data);
+  }catch(error){
+    dialog.showErrorBox(`Error load results`, error.toString())
+  }
 });
 
 ipcMain.handle('load-settings', () => {
-  const data = fs.readFileSync(path.join(__dirname, 'settings', 'settings.json'));
-  console.log('settings loaded')
-  return JSON.parse(data);
+  return global.settings
 });
 
 ipcMain.on('save-settings', async (event, newSettings) => {
   const settingsPath = path.join(__dirname, 'settings', 'settings.json');
-  await fs.promises.writeFile(settingsPath, JSON.stringify(newSettings, null, 2));
-});
+  try {
+    await fs.writeFile(settingsPath, JSON.stringify(newSettings, null, 2))
+    global.settings = newSettings
+  } catch (error) {
+    dialog.showErrorBox(`Error save settings`, error.toString())
+  }
+})

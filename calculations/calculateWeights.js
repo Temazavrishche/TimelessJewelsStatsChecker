@@ -1,6 +1,3 @@
-const { MainWindow } = require('../mainWindow/MainWindow')
-const fs = require('fs')
-const  path  = require('path')
 const statsWeight = {
     "GloriousVanity": {},
     "LethalPride": {'#% increased Strength': [2,12,60,200,1000],
@@ -86,72 +83,55 @@ const statsWeight = {
                     }
 }
 
-const weightManager = (stats) => {
+const calculateWeights = (jewels) => {
     const mapping = {
-        'GloriousVanity': (stats) => GloriousVanity(stats),
-        'LethalPride': (stats) => LethalPride(stats),
-        'BrutalRestraint': (stats) => BrutalRestraint(stats),
-        'MilitantFaith': (stats) => MilitantFaith(stats),
-        'ElegantHubris': (stats) => ElegantHubris(stats),
+        'GloriousVanity': (jewels) => GloriousVanity(jewels),
+        'LethalPride': (jewels) => LethalPride(jewels),
+        'BrutalRestraint': (jewels) => BrutalRestraint(jewels),
+        'MilitantFaith': (jewels) => MilitantFaith(jewels),
+        'ElegantHubris': (jewels) => ElegantHubris(jewels),
     }
-    for(const i in Object.entries(stats)){
-        stats[i].weight = mapping[stats[i].jewel](stats[i])
+    for(const jewel in jewels){
+        mapping[jewels[jewel].jewel](jewels[jewel].locations)
     }
-    const settings = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'settings', 'settings.json')))
-    const minWeight = settings.minWeight
-    const temp = Object.entries(stats).filter((item) => item[1].weight >= minWeight)
-    const temp2 = temp.reduce((acc, item) => {
-        const seedPlusJewel = item[1].seed + item[1].jewel
-        acc[seedPlusJewel] = acc[seedPlusJewel] || [];
-        acc[seedPlusJewel].push({
-            jewel: item[1].jewel,
-            conqueror: item[1].conqueror,
-            location: item[1].location,
-            nodes: item[1].nodes,
-            weight: item[1].weight
-        });
-        return acc;
-    }, {});
-    const res = Object.entries(temp2)
-    res.forEach((item) => item[1].sort((a, b) => b.weight - a.weight))
-    fs.writeFileSync('filteredResults.json',JSON.stringify(Object.fromEntries(res),null,2))
-    new MainWindow()
+    filterResults(jewels)
 }
 
-const GloriousVanity = (stats) =>{
+const GloriousVanity = (locations) =>{
     
 }
 
-const LethalPride = (stats) =>{
-    const counts = calcCounts(stats)
+const LethalPride = (locations) =>{
     let weight = 0
-    for(let [stat, count] of Object.entries(counts)){
-        count > 5 ? count = 5 : false
-        weight += statsWeight[stats.jewel][stat][count-1] ?? 0
+    for(const location in locations){
+        for(const stat in locations[location].nodes){
+            let count = locations[location].nodes[stat] - 1
+            count > 4 && (count = 4)
+            weight += statsWeight.LethalPride[stat][count]
+        }
+        locations[location].weight = weight
+        weight = 0
     }
-    return weight
 }
 
-const BrutalRestraint = (stats) =>{
+const BrutalRestraint = (locations) =>{
     
 }
 
-const MilitantFaith = (stats) =>{
+const MilitantFaith = (locations) =>{
     
 }
 
-const ElegantHubris = (stats) =>{
+const ElegantHubris = (locations) =>{
     
 }
 
-const calcCounts = (stats) =>{
-    let weight = 0
-    const counts = {}
-    for(const [oldStat, newStat] of Object.entries(stats.nodes)){
-        for(const [node, value] of Object.entries(newStat))
-            counts[node] = (counts[node] ?? 0) + 1 * value.length
+const filterResults = (jewels) => {
+    for(const jewel in jewels){
+        for(const location in jewels[jewel].locations){
+            jewels[jewel].locations[location].weight < global.settings.minWeight && delete jewels[jewel].locations[location]
+        }
     }
-    return counts
 }
 
-module.exports.weightManager = weightManager
+module.exports.calculateWeights = calculateWeights

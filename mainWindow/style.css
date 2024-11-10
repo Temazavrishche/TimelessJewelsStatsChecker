@@ -68,6 +68,81 @@ a:hover {
   text-decoration: underline;
 }
 
+.averageprice {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Добавлен отступ сверху */
+}
+
+.currency-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px; /* Сделать иконку круглой */
+  transition: transform 0.3s ease; /* Анимация для увеличения */
+}
+
+.currency-icon:hover {
+  transform: scale(1.2); /* Увеличение иконки при наведении */
+}
+
+.currency-tooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  width: 250px; /* Ширина увеличена */
+  white-space: normal;
+  line-height: 1.6; /* Увеличена высота строки для удобства чтения */
+  font-size: 14px; /* Размер шрифта уменьшен для лучшего восприятия */
+}
+
+.currency-tooltip .lot {
+  background-color: #2e2e2e;
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Отступ между лотами */
+  padding: 10px;
+}
+
+.currency-tooltip .lot p {
+  margin: 0;
+  font-size: 13px; /* Меньше размер текста для лотов */
+}
+
+.currency-tooltip .lot p strong {
+  color: #4caf50; /* Цвет для выделенных элементов */
+}
+
+.jewel-tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  width: 300px;
+  white-space: normal;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.jewel-tooltip p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.jewel-tooltip strong {
+  color: #4caf50;
+}
+
+
 .GloriousVanity {
   color: #FF0000; /* Красный */
 }

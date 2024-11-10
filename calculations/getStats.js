@@ -1,14 +1,26 @@
 const { getAffectedNodes } = require('./getAffectedNodes')
-const { weightManager } = require('./calculateWeights')
-const fs = require('fs')
+const fs = require('fs').promises
+const { app, dialog } = require('electron')
 const { exec } = require('child_process')
 const  path  = require('path')
 const locations = [60735,54127,61834,33989,34483,41263,46882,32763,21984,33631,55190,48768,31683,6230,61419,36634,7960,26196,26725,2491,28475]
-const skillTree = JSON.parse(fs.readFileSync('./data/SkillTree.json'))
-const passiveSkills = JSON.parse(fs.readFileSync('./data/passive_skills.json'))
-const allStats = JSON.parse(fs.readFileSync('./data/stats.json'))
-const statsDescriprion = JSON.parse(fs.readFileSync('./data/stat_descriptions.json'))
-const indexHandlers = {
+let skillTree, passiveSkills, allStats, statsDescription
+async function loadData() {
+    try{
+        [skillTree, passiveSkills, allStats, statsDescription] = await Promise.all([
+            fs.readFile('./data/SkillTree.json', 'utf8').then(JSON.parse),
+            fs.readFile('./data/passive_skills.json', 'utf8').then(JSON.parse),
+            fs.readFile('./data/stats.json', 'utf8').then(JSON.parse),
+            fs.readFile('./data/stat_descriptions.json', 'utf8').then(JSON.parse)
+        ])
+    }catch (error) {
+        dialog.showErrorBox(`Error load data`, error.toString())
+        app.quit()
+    }
+}
+loadData()
+
+/*const indexHandlers = {
     negate: -1,
     times_twenty: 1 / 20,
     canonical_stat: 1,
@@ -55,35 +67,51 @@ const indexHandlers = {
     divide_by_three: 3,
     divide_by_twenty_then_double_0dp: 10,
     divide_by_four: 4
-}
-
+}*/
 const getStats = (parsedJewels) => {
-    const jewels = {}
-    let count = 0
-    locations.forEach((location) => {
-        parsedJewels.forEach((jewel) => {
-            jewels[count] = {   location: location,
-                                jewel: jewel.jewelName,
-                                conqueror: jewel.conquerorName,
-                                seed: Number(jewel.seed),
-                                nodes: []
+    return new Promise(async (resolve, reject) => {
+        const jewels = {}
+        let count = 0
+        parsedJewels.forEach(jewel => {
+            jewels[count] = {
+                jewel: jewel.jewelName,
+                conqueror: jewel.conquerorName,
+                seed: Number(jewel.seed),
+                locations: {}
             }
-            getAffectedNodes(skillTree.nodes[location]).forEach((node) => {
-                jewels[count].nodes.push(getSkillKey(node))
+            locations.forEach(location => {
+                jewels[count].locations[location] = getAffectedNodes(skillTree.nodes[location]).reduce((acc, curr) => {
+                    acc.push(getSkillKey(curr))
+                    return acc
+                }, [])
             })
             count++
         })
-    })
-    fs.writeFileSync('jewels.json',JSON.stringify(jewels,null,2))
-    const go_calc = path.join(__dirname, 'go_calc')
-    exec(`${go_calc}`, (error,stdout,stderr) =>{
-        error ? console.log(error) : false
-        stderr ? console.log(stderr) : false
-        stdout ? console.log(stdout) : false 
-        const stats = JSON.parse(fs.readFileSync('output.json','utf-8'))
-        translateStats(stats)
+        try{
+            await fs.writeFile('jewels.json', JSON.stringify(jewels, null, 2))
+        }catch{
+            dialog.showErrorBox('Error writing jewels.json:', error.toString())
+            reject(error)
+        }
+        const go_calc = path.join(__dirname, 'go_calc')
+        exec(`${go_calc}`, async (error, stdout, stderr) => {
+            if (error) {
+                reject(error)
+            } else {
+                if (stderr) console.warn("Standard error output:", stderr)
+                if (stdout) console.log("Standard output:", stdout)
+                try {
+                    const jewels = JSON.parse(await fs.readFile('output.json', 'utf-8'))
+                    resolve(translateStats(jewels))
+                } catch (error) {
+                    dialog.showErrorBox('Error reading or parsing output.json:', error.toString())
+                    reject(error)
+                }
+            }
+        })
     })
 }
+
 
 const getSkillKey = (node) => {
     for (const item of passiveSkills) 
@@ -91,89 +119,19 @@ const getSkillKey = (node) => {
             return item._key;
 }
 
-const translateStats = (stats) => {
-    const res = {};
-    for (const [id, value] of Object.entries(stats)) {
-        const nodes = {};
-        for (const [node, stats] of Object.entries(value.nodes)) {
-            const translatedStats = {};
-            for (const [stat, value] of Object.entries(stats)) {
-                let item = '';
-                const replaceStat = ['base_strength', 'base_dexterity', 'base_intelligence'];
-                allStats.forEach((STAT) => {
-                    if (STAT._key == stat) {
-                        item = replaceStat.includes(STAT.Id) ? STAT.Id.replace('base', 'additional') : STAT.Id;
-                        return;
-                    }
-                });
-                let statDescriprion = { list: [{ string: '# to Devotion' }] };
-                statsDescriprion.descriptors.forEach((desc) => {
-                    if (desc.ids[0] == item) {
-                        statDescriprion = desc;
-                        return;
-                    }
-                });
-                let finalStat = value;
-                if (statDescriprion?.list[0].index_handlers != undefined) {
-                    Object.keys(statDescriprion.list[0].index_handlers).forEach((handler) => {
-                        finalStat = finalStat / (indexHandlers[handler] ?? 1);
-                    });
-                }
-                const st = statDescriprion?.list[0].string.replace(/{0(:\+?d)?}/g, '#');
-
-                translatedStats[st] ? translatedStats[st].push(finalStat) : translatedStats[st] = [finalStat]
-
+const translateStats = (jewels) => {
+    //Найти в jewels id по _key, потом в stat_description найти описание по ids(_key)
+    for (const i in jewels) {    
+        for (let location in jewels[i].locations) {
+            for (let nodeId in jewels[i].locations[location].nodes) {
+                const currentValue = jewels[i].locations[location].nodes[nodeId]
+                delete jewels[i].locations[location].nodes[nodeId]
+                const statId = allStats.find(stat => stat._key == nodeId).Id
+                const description = statsDescription.descriptors.find(desc => desc.ids[0] == statId).list[0].string.replace(/{0(:\+?d)?}/g, '#')
+                jewels[i].locations[location].nodes[description] = currentValue
             }
-
-            let skillName = '';
-            passiveSkills.forEach((skill) => skill._key == node ? skillName = skill.Name : false);
-
-            
-            if (nodes[skillName]) {
-                Object.keys(translatedStats).forEach((key) => {
-                    if (nodes[skillName][key]) {
-                        nodes[skillName][key] = nodes[skillName][key].concat(translatedStats[key])
-                    } else {
-                        nodes[skillName][key] = translatedStats[key]
-                    }
-                });
-            }
-            else 
-                nodes[skillName] = translatedStats;
         }
-        res[id] = {
-            location: value.location,
-            jewel: value.jewel,
-            conqueror: value.conqueror,
-            seed: value.seed,
-            nodes: nodes
-        };
     }
-    console.log('All stats translated');
-    fs.writeFileSync('test.json', JSON.stringify(res, null, 2));
-    weightManager(res)
-}
-
-const filterResults = (stats) => {
-    const settings = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'settings', 'settings.json')))
-    const minWeight = settings.minWeight
-    const temp = Object.entries(stats).filter((item) => item[1].weight >= minWeight)
-    const temp2 = temp.reduce((acc, item) => {
-        const seedPlusJewel = item[1].seed + item[1].jewel
-        acc[seedPlusJewel] = acc[seedPlusJewel] || [];
-        acc[seedPlusJewel].push({
-            jewel: item[1].jewel,
-            conqueror: item[1].conqueror,
-            location: item[1].location,
-            nodes: item[1].nodes,
-            weight: item[1].weight
-        });
-        return acc;
-    }, {});
-    const res = Object.entries(temp2)
-    res.forEach((item) => item[1].sort((a, b) => b.weight - a.weight))
-    fs.writeFileSync('filteredResults.json',JSON.stringify(Object.fromEntries(res),null,2))
-    console.log('All calculations done, file with results saved')
-    new MainWindow()
+    return jewels
 }
 module.exports.getStats = getStats

@@ -1,2247 +1,397 @@
 {
-  "17829LethalPride": [
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Kaom",
-      "location": 61834,
-      "nodes": {
-        "Arcing Blows": {
-          "#% increased Burning Damage": [
-            20
-          ]
+  "0": {
+    "jewel": "LethalPride",
+    "conqueror": "Kaom",
+    "seed": 17829,
+    "locations": {
+      "60735": {
+        "nodes": {
+          "# to Strength": 60,
+          "#% increased Melee Damage": 4,
+          "#% increased maximum Life": 2,
+          "#% increased Strength": 2,
+          "#% increased Global Physical Damage": 1,
+          "You take #% reduced Extra Damage from Critical Strikes": 1,
+          "#% increased Burning Damage": 1,
+          "Gain #% of Physical Damage as Extra Fire Damage": 1,
+          "Regenerate #% of Life per second": 1,
+          "#% to Melee Critical Strike Multiplier": 1,
+          "Ignites you inflict deal Damage #% faster": 1,
+          "#% increased Totem Placement speed": 1,
+          "#% increased Melee Critical Strike Chance": 1,
+          "#% increased Totem Damage": 1,
+          "#% increased Warcry Buff Effect": 1,
+          "#% chance to deal Double Damage": 1,
+          "Gain # Rage on Melee Hit": 1
         },
-        "Dagger Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Dagger Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Flaying": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Claws of the Magpie": {
-          "Gain # Rage on Melee Hit": [
-            1
-          ]
-        },
-        "Claw Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Mind Drinker": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Dagger Damage and Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "From the Shadows": {
-          "#% increased Warcry Buff Effect": [
-            8
-          ]
-        },
-        "Claw Damage and Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Frenetic": {
-          "Gain #% of Physical Damage as Extra Fire Damage": [
-            5
-          ]
-        },
-        "Frenzy Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Circle of Life": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Accuracy and Critical Strike Chance": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Depth Perception": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Infused": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "Dexterity": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Intelligence": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Critical Strike Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Sleight of Hand": {
-          "Ignites you inflict deal Damage #% faster": [
-            10
-          ]
-        },
-        "One Handed Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Damage against Marked Enemy": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mark the Prey": {
-          "#% increased Totem Damage": [
-            20
-          ]
-        },
-        "Coldhearted Calculation": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Fangs of the Viper": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Evasion and Energy Shield": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Life": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Trap and Mine Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Trap Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Trap Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Saboteur": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Damage Over Time": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Clever Thief": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Blood Drinker": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Mana": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Physical Damage and Ignore Physical Damage Reduction": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Master of Blades": {
-          "#% increased Melee Critical Strike Chance": [
-            30
-          ]
-        },
-        "Claw Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Life Recoup": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Basic Jewel Socket": {},
-        "Power Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dagger Damage and Movement Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Physical Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Will of Blades": {
-          "#% to Melee Critical Strike Multiplier": [
-            15
-          ]
-        },
-        "Elemental Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Elemental Focus": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "Trap Throwing Speed and Trigger Area": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Expeditious Munitions": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Life and Energy Shield on Kill": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Resourcefulness": {
-          "#% increased Global Physical Damage": [
-            20
-          ]
-        },
-        "Soul Thief": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Life and Mana on Hit": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Claws of the Hawk": {
-          "#% increased Totem Placement speed": [
-            12
-          ]
-        },
-        "Backstabbing": {
-          "#% increased Strength": [
-            5
-          ]
-        }
+        "weight": 200
       },
-      "weight": 200
+      "61834": {
+        "nodes": {
+          "# to Strength": 66,
+          "#% chance to deal Double Damage": 3,
+          "# to maximum Fortification": 3,
+          "You take #% reduced Extra Damage from Critical Strikes": 2,
+          "#% of Attack Damage Leeched as Life": 2,
+          "#% increased Warcry Buff Effect": 2,
+          "#% to Fire Resistance": 1,
+          "#% increased Burning Damage": 1,
+          "#% increased Stun Duration on Enemies": 1,
+          "Regenerate #% of Life per second": 1,
+          "#% to Melee Critical Strike Multiplier": 1,
+          "#% increased Totem Placement speed": 1,
+          "#% increased Melee Critical Strike Chance": 1
+        },
+        "weight": 152
+      }
     },
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Kaom",
-      "location": 60735,
-      "nodes": {
-        "Sword Damage and Block": {
-          "# to Strength": [
-            4,
-            4
-          ]
+    "prices": {
+      "lots": [
+        {
+          "amount": 10,
+          "currency": "divine",
+          "indexed": "2024-11-03T16:15:30Z",
+          "conqueror": "kaom"
         },
-        "Intuition": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Bow Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Bow Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Bow Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Bow Damage and Critical Strike Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Fervour": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Herbalism": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Evasion Per Frenzy Charge": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Accuracy and Attack Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Acuity": {
-          "#% increased Totem Placement speed": [
-            12
-          ]
-        },
-        "Weapon Artistry": {
-          "#% increased Warcry Buff Effect": [
-            8
-          ]
-        },
-        "Critical Strike Chance": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Heartseeker": {
-          "#% to Melee Critical Strike Multiplier": [
-            15
-          ]
-        },
-        "Weapon Elemental Damage": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Bow Attack Speed and Accuracy": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Movement Speed and Spell Suppression": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dexterity": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4,
-            4,
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Attack Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Evasion and Elemental Resistances": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Life": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Projectile Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Stun Avoidance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Perfectionist": {
-          "#% to Fire Resistance": [
-            20
-          ]
-        },
-        "Survivalist": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Forces of Nature": {
-          "#% increased Stun Duration on Enemies": [
-            20
-          ]
-        },
-        "Quickstep": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Basic Jewel Socket": {},
-        "Frenzy Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Cold Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Cold Damage and Cold Ailment Effect": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Flash Freeze": {
-          "#% of Attack Damage Leeched as Life": [
-            0.4
-          ]
-        },
-        "Aspect of the Lynx": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Physical Damage as Extra Cold Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Winter Spirit": {
-          "#% increased Warcry Buff Effect": [
-            8
-          ]
-        },
-        "Chain Distance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Multishot": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Poison Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Poison Damage and Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Attack Speed and Poison Duration": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Swift Venoms": {
-          "#% of Attack Damage Leeched as Life": [
-            0.4
-          ]
-        },
-        "Evasion": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Evasion and Blind Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Blind Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Silent Steps": {
-          "#% increased Melee Critical Strike Chance": [
-            30
-          ]
-        },
-        "Spell Suppression": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Inveterate": {
-          "#% increased Burning Damage": [
-            20
-          ]
-        },
-        "Attack Mana Cost": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Thrill of Battle": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Slower Mana Burn": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Tincture Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Practised Reapplication": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Burst of Energy": {
-          "# to Strength": [
-            20
-          ]
+        {
+          "amount": 25,
+          "currency": "divine",
+          "indexed": "2024-11-03T11:41:05Z",
+          "conqueror": "akoya"
         }
-      },
-      "weight": 152
+      ],
+      "averagePrice": 17.5,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
     }
-  ],
-  "10381LethalPride": [
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Kaom",
-      "location": 46882,
-      "nodes": {
-        "Weapon Cold Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
+  },
+  "1": {
+    "jewel": "LethalPride",
+    "conqueror": "Rakiata",
+    "seed": 11864,
+    "locations": {},
+    "prices": {
+      "lots": [
+        {
+          "amount": 2,
+          "currency": "divine",
+          "indexed": "2024-11-07T17:41:25Z",
+          "conqueror": "rakiata"
         },
-        "Fangs of Frost": {
-          "#% increased Stun Duration on Enemies": [
-            20
-          ]
+        {
+          "amount": 15,
+          "currency": "divine",
+          "indexed": "2024-11-08T13:21:30Z",
+          "conqueror": "akoya"
         },
-        "Stance Skill Cooldown Recovery": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
+        {
+          "amount": 15,
+          "currency": "divine",
+          "indexed": "2024-11-04T15:00:23Z",
+          "conqueror": "akoya"
         },
-        "Axe Damage and Attack Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dance of Blades": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Dexterity": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Twin Terrors": {
-          "#% increased Totem Damage": [
-            20
-          ]
-        },
-        "Dual Wield Critical Strike Multiplier and Accuracy": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Life and Elemental Ailment Avoidance": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Thick Skin": {
-          "#% increased Armour": [
-            20
-          ]
-        },
-        "Evasion": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Dazzling Strikes": {
-          "#% increased Global Physical Damage": [
-            20
-          ]
-        },
-        "Utmost Swiftness": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Sword Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Sword Damage and Melee Range": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Bladedancer": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "Dual Wield Critical Strike Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Totem Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Surveillance": {
-          "#% to Fire Resistance": [
-            20
-          ]
-        },
-        "Flask Charges against Marked Enemy": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Marked for Death": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Bleed and Critical Strike Chance": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Aggravate Bleeding On Critical Strike Chance": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Cornered Prey": {
-          "#% increased Strength": [
-            5
-          ]
+        {
+          "amount": 150,
+          "currency": "divine",
+          "indexed": "2024-11-06T13:25:26Z",
+          "conqueror": "kaom"
         }
-      },
-      "weight": 212
+      ],
+      "averagePrice": 45.5,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
+    }
+  },
+  "2": {
+    "jewel": "LethalPride",
+    "conqueror": "Rakiata",
+    "seed": 15873,
+    "locations": {
+      "61834": {
+        "nodes": {
+          "# to Strength": 60,
+          "#% increased Melee Damage": 4,
+          "#% increased Armour": 3,
+          "#% to Fire Resistance": 3,
+          "Regenerate #% of Life per second": 3,
+          "#% increased maximum Life": 2,
+          "#% increased Strength": 2,
+          "You take #% reduced Extra Damage from Critical Strikes": 1,
+          "#% increased Stun Duration on Enemies": 1,
+          "#% increased Totem Placement speed": 1,
+          "#% increased Melee Critical Strike Chance": 1
+        },
+        "weight": 247
+      }
     },
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Kaom",
-      "location": 54127,
-      "nodes": {
-        "Mace Damage and Area of Effect": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Life": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Vigour": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Savagery": {
-          "#% increased Totem Damage": [
-            20
-          ]
-        },
-        "Mana and Mana Regeneration": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mana Flows": {
-          "#% increased Warcry Buff Effect": [
-            8
-          ]
-        },
-        "Dual Wield Attack Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dual Wield Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Ambidexterity": {
-          "#% to Fire Resistance": [
-            20
-          ]
-        },
-        "Two Handed Melee Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Destroyer": {
-          "#% increased Burning Damage": [
-            20
-          ]
-        },
-        "Two Handed Attack Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dual Wield Damage and Block": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Master of the Arena": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Art of the Gladiator": {
-          "#% increased Warcry Buff Effect": [
-            8
-          ]
-        },
-        "Dexterity": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Strength": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Dervish": {
-          "#% of Attack Damage Leeched as Life": [
-            0.4
-          ]
-        },
-        "Golem's Blood": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Accuracy": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Projectile Damage": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Fury Bolts": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Armour and Evasion": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Cloth and Chain": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Mana and Aura Area of Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mace Damage and Attack Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Attack Damage in Blood Stance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Attack Speed in Sand Stance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Revelry": {
-          "#% increased Burning Damage": [
-            20
-          ]
-        },
-        "Ribcage Crusher": {
-          "#% of Attack Damage Leeched as Life": [
-            0.4
-          ]
-        },
-        "Dual Wield Damage and Attack Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Bravery": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "Attack Damage with Shield": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Defences with Shield": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Defiance": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Dual Wield Accuracy": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Two Handed Melee Accuracy": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Block Chance and Attack Damage with Shield": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Attack Damage and Attack Speed with Shield": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Retaliation": {
-          "Gain # Rage on Melee Hit": [
-            1
-          ]
-        },
-        "Seasoned Swordplay": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Basic Jewel Socket": {},
-        "Endurance Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Frenzy Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Fortify on Melee Stun": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Fortification Gain": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Faster Ailments": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Dirty Techniques": {
-          "#% increased Stun Duration on Enemies": [
-            20
-          ]
-        },
-        "Armour and Guard Skill Cooldown Recovery": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Adamant": {
-          "#% increased Armour": [
-            20
-          ]
-        },
-        "Impale Effect": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Impale Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Forceful Skewering": {
-          "#% increased Totem Placement speed": [
-            12
-          ]
-        },
-        "Evasion per Frenzy Charge": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Armour per Endurance Charge": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Physical Bow Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Two Handed Melee Critical Strike Chance and Accuracy": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Titanic Impacts": {
-          "#% increased Melee Critical Strike Chance": [
-            30
-          ]
-        },
-        "Melee Damage and Strike Range": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Assured Strike": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Deflection": {
-          "Gain # Rage on Melee Hit": [
-            1
-          ]
-        },
-        "Warcry Duration": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Warcry Buff Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Roaring Challenge": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        }
-      },
-      "weight": 161
+    "prices": {
+      "lots": []
     }
-  ],
-  "15605LethalPride": [
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Akoya",
-      "location": 32763,
-      "nodes": {
-        "Claw Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Flask Charges Gained": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "From the Shadows": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Bow Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Poison Chance and Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Hunter's Gambit": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Critical Strike Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Heartseeker": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Dexterity": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Damage against Marked Enemy": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mark the Prey": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Projectile Damage": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Perfectionist": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Clever Thief": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Chance for Extra Fork Projectile": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Pierce": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Piercing Shots": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Survivalist": {
-          "#% to Melee Critical Strike Multiplier": [
-            15
-          ]
-        },
-        "Forces of Nature": {
-          "#% to Melee Critical Strike Multiplier": [
-            15
-          ]
-        },
-        "Claw Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Dagger Damage and Movement Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Poison Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Poison Damage Multiplier": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Fatal Toxins": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Poison Chance and Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Chain Distance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Multishot": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Life and Mana on Hit": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Evasion and Blind Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Silent Steps": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Spell Suppression": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Inveterate": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Trick Shot": {
-          "#% increased Warcry Buff Effect": [
-            8
-          ]
-        },
-        "Split Shot": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Forking Angle": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Careful Conservationist": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Attack Mana Cost": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Thrill of Battle": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Slower Mana Burn": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Tincture Mana on Kill": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Burst of Energy": {
-          "#% of Attack Damage Leeched as Life": [
-            0.4
-          ]
+  },
+  "3": {
+    "jewel": "LethalPride",
+    "conqueror": "Akoya",
+    "seed": 17146,
+    "locations": {},
+    "prices": {
+      "lots": [
+        {
+          "amount": 59,
+          "currency": "divine",
+          "indexed": "2024-11-03T02:01:54Z",
+          "conqueror": "kaom"
         }
+      ],
+      "averagePrice": 58.99999999999999,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
+    }
+  },
+  "4": {
+    "jewel": "LethalPride",
+    "conqueror": "Kaom",
+    "seed": 10381,
+    "locations": {
+      "46882": {
+        "nodes": {
+          "# to Strength": 28,
+          "#% increased Strength": 4,
+          "#% increased Global Physical Damage": 1,
+          "#% increased Armour": 1,
+          "#% increased maximum Life": 1,
+          "#% to Fire Resistance": 1,
+          "#% increased Stun Duration on Enemies": 1,
+          "#% increased Totem Damage": 1
+        },
+        "weight": 212
       },
-      "weight": 1072
+      "54127": {
+        "nodes": {
+          "# to Strength": 69,
+          "#% chance to deal Double Damage": 3,
+          "You take #% reduced Extra Damage from Critical Strikes": 2,
+          "#% increased Burning Damage": 2,
+          "#% of Attack Damage Leeched as Life": 2,
+          "#% increased Warcry Buff Effect": 2,
+          "Gain # Rage on Melee Hit": 2,
+          "#% increased Armour": 1,
+          "#% increased maximum Life": 1,
+          "#% to Fire Resistance": 1,
+          "#% increased Stun Duration on Enemies": 1,
+          "Regenerate #% of Life per second": 1,
+          "#% increased Totem Placement speed": 1,
+          "#% increased Melee Critical Strike Chance": 1,
+          "#% increased Totem Damage": 1,
+          "# to maximum Fortification": 1
+        },
+        "weight": 161
+      }
     },
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Akoya",
-      "location": 54127,
-      "nodes": {
-        "Mace Damage and Area of Effect": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Life": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Vigour": {
-          "#% increased Global Physical Damage": [
-            20
-          ]
-        },
-        "Savagery": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Mana and Mana Regeneration": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mana Flows": {
-          "#% increased Stun Duration on Enemies": [
-            20
-          ]
-        },
-        "Dual Wield Attack Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dual Wield Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Ambidexterity": {
-          "Gain #% of Physical Damage as Extra Fire Damage": [
-            5
-          ]
-        },
-        "Two Handed Melee Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Destroyer": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Two Handed Attack Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dual Wield Damage and Block": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Master of the Arena": {
-          "#% increased Armour": [
-            20
-          ]
-        },
-        "Art of the Gladiator": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Dexterity": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Strength": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Dervish": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Golem's Blood": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Accuracy": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Projectile Damage": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Fury Bolts": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Armour and Evasion": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Cloth and Chain": {
-          "Ignites you inflict deal Damage #% faster": [
-            10
-          ]
-        },
-        "Mana and Aura Area of Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mace Damage and Attack Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Attack Damage in Blood Stance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Attack Speed in Sand Stance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Revelry": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Ribcage Crusher": {
-          "#% increased Totem Placement speed": [
-            12
-          ]
-        },
-        "Dual Wield Damage and Attack Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Bravery": {
-          "Gain # Rage on Melee Hit": [
-            1
-          ]
-        },
-        "Attack Damage with Shield": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Defences with Shield": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Defiance": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Dual Wield Accuracy": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Two Handed Melee Accuracy": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Block Chance and Attack Damage with Shield": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Attack Damage and Attack Speed with Shield": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Retaliation": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "Seasoned Swordplay": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Basic Jewel Socket": {},
-        "Endurance Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Frenzy Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Fortify on Melee Stun": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Fortification Gain": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Faster Ailments": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Dirty Techniques": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Armour and Guard Skill Cooldown Recovery": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Adamant": {
-          "#% increased Armour": [
-            20
-          ]
-        },
-        "Impale Effect": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Impale Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Forceful Skewering": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Evasion per Frenzy Charge": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Armour per Endurance Charge": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Physical Bow Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Two Handed Melee Critical Strike Chance and Accuracy": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Titanic Impacts": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Melee Damage and Strike Range": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Assured Strike": {
-          "#% increased Stun Duration on Enemies": [
-            20
-          ]
-        },
-        "Deflection": {
-          "Gain #% of Physical Damage as Extra Fire Damage": [
-            5
-          ]
-        },
-        "Warcry Duration": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Warcry Buff Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Roaring Challenge": {
-          "#% increased Strength": [
-            5
-          ]
+    "prices": {
+      "lots": [
+        {
+          "amount": 15,
+          "currency": "divine",
+          "indexed": "2024-11-02T20:13:52Z",
+          "conqueror": "rakiata"
         }
-      },
-      "weight": 177
+      ],
+      "averagePrice": 15,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
     }
-  ],
-  "15873LethalPride": [
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Rakiata",
-      "location": 61834,
-      "nodes": {
-        "Arcing Blows": {
-          "#% increased Melee Damage": [
-            20
-          ]
+  },
+  "5": {
+    "jewel": "LethalPride",
+    "conqueror": "Akoya",
+    "seed": 15605,
+    "locations": {
+      "32763": {
+        "nodes": {
+          "# to Strength": 46,
+          "#% increased Strength": 5,
+          "Regenerate #% of Life per second": 3,
+          "You take #% reduced Extra Damage from Critical Strikes": 2,
+          "#% to Melee Critical Strike Multiplier": 2,
+          "#% chance to deal Double Damage": 2,
+          "# to maximum Fortification": 2,
+          "#% of Attack Damage Leeched as Life": 1,
+          "#% increased Warcry Buff Effect": 1
         },
-        "Dagger Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
+        "weight": 1072
+      },
+      "54127": {
+        "nodes": {
+          "# to Strength": 68,
+          "You take #% reduced Extra Damage from Critical Strikes": 3,
+          "#% chance to deal Double Damage": 3,
+          "#% increased Armour": 2,
+          "#% increased Stun Duration on Enemies": 2,
+          "Gain #% of Physical Damage as Extra Fire Damage": 2,
+          "#% increased Strength": 2,
+          "# to maximum Fortification": 2,
+          "#% increased Global Physical Damage": 1,
+          "#% increased maximum Life": 1,
+          "Regenerate #% of Life per second": 1,
+          "Ignites you inflict deal Damage #% faster": 1,
+          "#% increased Totem Placement speed": 1,
+          "#% increased Melee Damage": 1,
+          "Gain # Rage on Melee Hit": 1
         },
-        "Dagger Damage": {
-          "# to Strength": [
-            4
-          ]
+        "weight": 177
+      }
+    },
+    "prices": {
+      "lots": [
+        {
+          "amount": 10,
+          "currency": "divine",
+          "indexed": "2024-11-05T21:51:22Z",
+          "conqueror": "akoya"
         },
-        "Flaying": {
-          "#% increased Armour": [
-            20
-          ]
+        {
+          "amount": 14,
+          "currency": "divine",
+          "indexed": "2024-11-06T22:52:30Z",
+          "conqueror": "rakiata"
         },
-        "Claws of the Magpie": {
-          "#% increased Stun Duration on Enemies": [
-            20
-          ]
-        },
-        "Claw Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Mind Drinker": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "Dagger Damage and Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "From the Shadows": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Claw Damage and Attack Speed": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Frenetic": {
-          "#% to Fire Resistance": [
-            20
-          ]
-        },
-        "Frenzy Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Circle of Life": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Accuracy and Critical Strike Chance": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Depth Perception": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Infused": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Dexterity": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Intelligence": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Critical Strike Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Sleight of Hand": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "One Handed Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Damage against Marked Enemy": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mark the Prey": {
-          "#% increased Totem Placement speed": [
-            12
-          ]
-        },
-        "Coldhearted Calculation": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Fangs of the Viper": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Evasion and Energy Shield": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Life": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Trap and Mine Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Trap Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Trap Damage": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Saboteur": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Damage Over Time": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Clever Thief": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Blood Drinker": {
-          "# to Strength": [
-            20
-          ]
-        },
-        "Mana": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Physical Damage and Ignore Physical Damage Reduction": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Master of Blades": {
-          "#% to Fire Resistance": [
-            20
-          ]
-        },
-        "Claw Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Life Recoup": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Basic Jewel Socket": {},
-        "Power Charge Duration": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dagger Damage and Movement Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Physical Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Will of Blades": {
-          "#% to Fire Resistance": [
-            20
-          ]
-        },
-        "Elemental Damage": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Elemental Focus": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Trap Throwing Speed and Trigger Area": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Expeditious Munitions": {
-          "#% increased Armour": [
-            20
-          ]
-        },
-        "Life and Energy Shield on Kill": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Resourcefulness": {
-          "#% increased Armour": [
-            20
-          ]
-        },
-        "Soul Thief": {
-          "You take #% reduced Extra Damage from Critical Strikes": [
-            10
-          ]
-        },
-        "Life and Mana on Hit": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Claws of the Hawk": {
-          "#% increased Melee Critical Strike Chance": [
-            30
-          ]
-        },
-        "Backstabbing": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
+        {
+          "amount": 16,
+          "currency": "divine",
+          "indexed": "2024-11-03T02:01:46Z",
+          "conqueror": "akoya"
         }
-      },
-      "weight": 247
+      ],
+      "averagePrice": 13.333333333333334,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
     }
-  ],
-  "14540LethalPride": [
-    {
-      "jewel": "LethalPride",
-      "conqueror": "Akoya",
-      "location": 21984,
-      "nodes": {
-        "Fusillade": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
+  },
+  "6": {
+    "jewel": "LethalPride",
+    "conqueror": "Akoya",
+    "seed": 14540,
+    "locations": {
+      "21984": {
+        "nodes": {
+          "# to Strength": 47,
+          "#% chance to deal Double Damage": 3,
+          "#% to Melee Critical Strike Multiplier": 2,
+          "#% reduced Enemy Stun Threshold": 1,
+          "#% increased Armour": 1,
+          "#% increased maximum Life": 1,
+          "#% increased Burning Damage": 1,
+          "Gain #% of Physical Damage as Extra Fire Damage": 1,
+          "Regenerate #% of Life per second": 1,
+          "#% increased Melee Critical Strike Chance": 1,
+          "#% increased Melee Damage": 1,
+          "#% increased Strength": 1,
+          "#% increased Warcry Buff Effect": 1,
+          "# to maximum Fortification": 1
         },
-        "Elder Power": {
-          "#% increased Warcry Buff Effect": [
-            8
-          ]
-        },
-        "Lightning Critical Strike Multiplier": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Critical Strike Multiplier": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Throatseeker": {
-          "Regenerate #% of Life per second": [
-            1
-          ]
-        },
-        "Physique": {
-          "#% increased Burning Damage": [
-            20
-          ]
-        },
-        "Alacrity": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Intelligence": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Whispers of Doom": {
-          "#% increased Armour": [
-            20
-          ]
-        },
-        "Reservation Efficiency": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Aura Effect": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Influence": {
-          "#% to Melee Critical Strike Multiplier": [
-            15
-          ]
-        },
-        "Glacial Cage": {
-          "#% increased Strength": [
-            5
-          ]
-        },
-        "Curse Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Curse Cast Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Freeze Chance": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Wand Damage": {
-          "# to Strength": [
-            4,
-            4,
-            4,
-            4
-          ]
-        },
-        "Wand Attack Speed and Accuracy": {
-          "# to Strength": [
-            4,
-            4,
-            4
-          ]
-        },
-        "Wand Critical Strike Chance and Multiplier": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mana": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Chill Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Ignite Chance": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "High Voltage": {
-          "#% increased Melee Damage": [
-            20
-          ]
-        },
-        "Energy Shield Leech": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Increased Energy Shield Leeched": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Light Eater": {
-          "#% chance to deal Double Damage": [
-            5
-          ]
-        },
-        "Dual Wield Cast Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Dual Wield Cast Speed and Movement Skill Cooldown Recovery": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Dual Wield Spell Damage and Movement Speed": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Mysticism": {
-          "#% increased maximum Life": [
-            4
-          ]
-        },
-        "Conjured Barrier": {
-          "#% increased Melee Critical Strike Chance": [
-            30
-          ]
-        },
-        "Winter's Embrace": {
-          "Gain #% of Physical Damage as Extra Fire Damage": [
-            5
-          ]
-        },
-        "Disintegration": {
-          "#% reduced Enemy Stun Threshold": [
-            10
-          ]
-        },
-        "Mine Damage and Reservation Efficiency": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Efficient Explosives": {
-          "# to maximum Fortification": [
-            1
-          ]
-        },
-        "Searing Heat": {
-          "#% to Melee Critical Strike Multiplier": [
-            15
-          ]
-        },
-        "Faster Ignite": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Chance to Poison with Spells": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Poison Damage and Cast Speed": {
-          "# to Strength": [
-            4
-          ]
-        },
-        "Curse Mana Reservation Efficiency": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Hex Area of Effect": {
-          "# to Strength": [
-            4,
-            4
-          ]
-        },
-        "Curse Duration": {
-          "# to Strength": [
-            4,
-            4
-          ]
+        "weight": 152
+      }
+    },
+    "prices": {
+      "lots": [
+        {
+          "amount": 75,
+          "currency": "divine",
+          "indexed": "2024-11-03T02:01:58Z",
+          "conqueror": "akoya"
         }
-      },
-      "weight": 152
+      ],
+      "averagePrice": 75,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
     }
-  ]
+  },
+  "7": {
+    "jewel": "LethalPride",
+    "conqueror": "Kaom",
+    "seed": 15672,
+    "locations": {},
+    "prices": {
+      "lots": [
+        {
+          "amount": 26,
+          "currency": "divine",
+          "indexed": "2024-11-03T02:01:49Z",
+          "conqueror": "kaom"
+        }
+      ],
+      "averagePrice": 26,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
+    }
+  },
+  "8": {
+    "jewel": "LethalPride",
+    "conqueror": "Akoya",
+    "seed": 12587,
+    "locations": {},
+    "prices": {
+      "lots": [
+        {
+          "amount": 5,
+          "currency": "divine",
+          "indexed": "2024-11-02T20:22:23Z",
+          "conqueror": "rakiata"
+        },
+        {
+          "amount": 14,
+          "currency": "divine",
+          "indexed": "2024-11-03T02:01:52Z",
+          "conqueror": "akoya"
+        },
+        {
+          "amount": 15,
+          "currency": "divine",
+          "indexed": "2024-11-03T17:39:59Z",
+          "conqueror": "akoya"
+        },
+        {
+          "amount": 75,
+          "currency": "divine",
+          "indexed": "2024-11-03T02:01:58Z",
+          "conqueror": "akoya"
+        }
+      ],
+      "averagePrice": 27.25,
+      "currencyImg": {
+        "id": 3,
+        "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lNb2RWYWx1ZXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1a54ff97d/CurrencyModValues.png",
+        "name": "Divine Orb",
+        "tradeId": "divine"
+      }
+    }
+  }
 }

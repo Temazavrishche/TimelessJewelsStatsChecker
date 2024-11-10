@@ -62,6 +62,38 @@ const loadSettings = (settings) => {
     currentTabGroup.appendChild(currentTabLabel);
     container.appendChild(currentTabGroup);
 
+    // Создание выпадающего списка для "Trade Indexed"
+    const tradeIndexedGroup = document.createElement('div');
+    tradeIndexedGroup.className = 'setting-group';
+    const tradeIndexedLabel = document.createElement('label');
+    tradeIndexedLabel.textContent = 'Trade Indexed:';
+    const tradeIndexedSelect = document.createElement('select');
+    const oneWeekOption = document.createElement('option');
+    oneWeekOption.value = '1week';
+    oneWeekOption.textContent = '1 Week';
+    const twoWeekOption = document.createElement('option');
+    twoWeekOption.value = '2week';
+    twoWeekOption.textContent = '2 Weeks';
+    const threeDaysOption = document.createElement('option');
+    threeDaysOption.value = '3days';
+    threeDaysOption.textContent = '3 Days';
+    const oneDayOption = document.createElement('option');
+    oneDayOption.value = '1day';
+    oneDayOption.textContent = '1 Day';
+    const oneMonthOption = document.createElement('option');
+    oneMonthOption.value = '1month';
+    oneMonthOption.textContent = '1 Month';
+
+    tradeIndexedSelect.appendChild(oneWeekOption);
+    tradeIndexedSelect.appendChild(twoWeekOption);
+    tradeIndexedSelect.appendChild(threeDaysOption);
+    tradeIndexedSelect.appendChild(oneDayOption);
+    tradeIndexedSelect.appendChild(oneMonthOption);
+    tradeIndexedSelect.value = settings.tradeIndexed;
+    tradeIndexedLabel.appendChild(tradeIndexedSelect);
+    tradeIndexedGroup.appendChild(tradeIndexedLabel);
+    container.appendChild(tradeIndexedGroup);
+
     // Создание кнопки "Сохранить"
     const saveButton = document.createElement('button');
     saveButton.textContent = 'Save Settings';
@@ -72,7 +104,8 @@ const loadSettings = (settings) => {
             normal: Number(normalTabInput.value),
             quad: Number(quadTabInput.value),
             currentTab: currentTabSelect.value,
-            minWeight: Number(minWeightInput.value)
+            minWeight: Number(minWeightInput.value),
+            tradeIndexed: tradeIndexedSelect.value
         };
 
         window.settings.saveSettings(updatedSettings);

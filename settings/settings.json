@@ -2,5 +2,6 @@
   "normal": 53,
   "quad": 26.5,
   "currentTab": "quad",
-  "minWeight": 150
+  "minWeight": 150,
+  "tradeIndexed": "1week"
 }
